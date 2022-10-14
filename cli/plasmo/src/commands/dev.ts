@@ -9,7 +9,7 @@ import { createManifest } from "~features/manifest-factory/create-manifest"
 async function dev() {
   printHeader()
 
-  process.env.NODE_ENV = "development"
+  process.env.NODE_ENV = process.env.NODE_ENV || "development"
 
   const rawServePort = getFlag("--serve-port") || "1012"
   const rawHmrPort = getFlag("--hmr-port") || "1815"

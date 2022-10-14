@@ -32,9 +32,7 @@ export const getCommonPath = (
 
   process.env.PLASMO_BUILD_DIR = buildDirectory
 
-  const distDirectoryName = `${target}-${
-    process.env.NODE_ENV === "production" ? "prod" : "dev"
-  }`
+  const distDirectoryName = `${target}-${process.env.NODE_ENV}`
 
   const distDirectory = resolve(buildDirectory, distDirectoryName)
 

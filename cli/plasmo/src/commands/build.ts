@@ -12,7 +12,7 @@ import { createManifest } from "~features/manifest-factory/create-manifest"
 async function build() {
   printHeader()
 
-  process.env.NODE_ENV = "production"
+  process.env.NODE_ENV = process.env.NODE_ENV || "production"
 
   const [internalCmd] = getNonFlagArgvs("build")
 
